@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 brave_path = 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe'
 
-# # Configuramos chrome para que abra Brave
+# # Configuramos el navegador para Brave
 options = webdriver.ChromeOptions()
 options.binary_location = brave_path
 
@@ -44,19 +44,19 @@ try:
     )
     nuevo_filter.click()
 
-    # Seleccionamos el filtro de ciudad "Distrito Federal"
+    # Seleccionamos la ciudad "Distrito Federal"
     ciudad_filter = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, "a.ui-search-link[title*='Distrito Federal']"))
     )
     ciudad_filter.click()
 
-    # Seleccionamos el filtro
+    # Seleccionamos el filtro de orden
     filtro_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, ".andes-dropdown__trigger"))
     )
     filtro_button.click()
 
-    # Seleccionamos la opcion de precio de mayor a menor
+    # Seleccionamos la opcion de precio de mayor a menor dentro del filtro de orden
     de_mayor_a_menor_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, "li.andes-list__item[data-key='price_desc']"))
     )
