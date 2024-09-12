@@ -57,7 +57,7 @@ try:
     filtro_button.click()
 
     # Seleccionamos la opcion de precio de mayor a menor dentro del filtro de orden
-    de_mayor_a_menor_button = WebDriverWait(driver, 10).until(
+    de_mayor_a_menor_button = WebDriverWait(driver, 20).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, "li.andes-list__item[data-key='price_desc']"))
     )
     de_mayor_a_menor_button.click()
