@@ -10,8 +10,18 @@ Script de prueba para busqueda automatizada de consolas "PlayStation 5" en artic
     ```sh
     pip install selenium
     ```
+3. **WebDriver module**: Instala el paquete chromedriver utilizando pip:
+    ```sh
+    pip install chromedriver_binary
+    ```
 
-3. **WebDriver**: Necesitas un WebDriver compatible con la versión de tu navegador. Por ejemplo, si usas Chrome, descarga `chromedriver`. Asegúrate de que el `chromedriver` esté en tu PATH o especifica su ubicación en el script.
+4. **Forcing WebDriver update and compatibility**: Aveces el driver no será compatible con la version de navegador que tengas, por lo que es buena opcion que instales el siguiente paquete, que basicamente se asegura de que tengas la version de chromedriver compatible con tu navegador chromium de forma automatica:
+    ```sh
+    pip install chromedriver-binary-auto
+    pip install --upgrade --force-reinstall chromedriver-binary-auto
+    ```
+
+5. **NOTA:**: Necesitas un WebDriver compatible con la versión de tu navegador. Por ejemplo, si usas Chrome, descarga `chromedriver`. Asegúrate de que el `chromedriver` esté en tu PATH o especifica su ubicación en el script.
 
 ## Ejecución
 
